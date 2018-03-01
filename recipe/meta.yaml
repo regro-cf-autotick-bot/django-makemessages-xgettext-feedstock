@@ -1,6 +1,6 @@
 {% set name = "django-makemessages-xgettext" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "d45daec6cd807bf7721d84b6bbf2ddc609ade2e904a8874b49e893bf0172b802" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "5d0500c7aad704759911cb1b98b6f223f0702e13e504459b4dbda81665aa174f" %}
 
 package:
   name: {{ name|lower }}
