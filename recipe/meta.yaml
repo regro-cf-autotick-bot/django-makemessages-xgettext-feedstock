@@ -1,24 +1,22 @@
-{% set name = "django-makemessages-xgettext" %}
 {% set version = "0.1.1" %}
-{% set sha256 = "5d0500c7aad704759911cb1b98b6f223f0702e13e504459b4dbda81665aa174f" %}
 
 package:
-  name: {{ name|lower }}
+  name: django-makemessages-xgettext
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/d/django-makemessages-xgettext/django-makemessages-xgettext-{{ version }}.tar.gz
+  sha256: 5d0500c7aad704759911cb1b98b6f223f0702e13e504459b4dbda81665aa174f
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
   noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - django >=1.7
